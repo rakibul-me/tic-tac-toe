@@ -191,27 +191,25 @@ function swapPlayer(com){
                     return;
                 }
             }
-            if([2,2,2,2,2,1,2,2,1,2,2,2,2,2,2,2,2,1,2,2,2,2,1,2,2][rndInt(0, 25-1)] == 2){
-                for(i = 0; i < length; i++){
-                    if(getelem(wins[i][0]).innerText == "X" && getelem(wins[i][1]).innerText == "X" && getelem(wins[i][2]).innerText == '') {
-                        setTimeout(() => {
-                            handleClick(wins[i][2], true);
-                        }, 700);
-                        prevent(); 
-                        return;
-                    } else if(getelem(wins[i][0]).innerText == "X" && getelem(wins[i][2]).innerText == "X" && getelem(wins[i][1]).innerText == '') {
-                        setTimeout(() => {
-                            handleClick(wins[i][1], true);
-                        }, 700);
-                        prevent(); 
-                        return;
-                    } else if(getelem(wins[i][1]).innerText == "X" && getelem(wins[i][2]).innerText == "X" && getelem(wins[i][0]).innerText == '') {
-                        setTimeout(() => {
-                            handleClick(wins[i][0], true);
-                        }, 700);
-                        prevent(); 
-                        return;
-                    }
+            for(i = 0; i < length; i++){
+                if(getelem(wins[i][0]).innerText == "X" && getelem(wins[i][1]).innerText == "X" && getelem(wins[i][2]).innerText == '') {
+                    setTimeout(() => {
+                        handleClick(wins[i][2], true);
+                    }, 700);
+                    prevent(); 
+                    return;
+                } else if(getelem(wins[i][0]).innerText == "X" && getelem(wins[i][2]).innerText == "X" && getelem(wins[i][1]).innerText == '') {
+                    setTimeout(() => {
+                        handleClick(wins[i][1], true);
+                    }, 700);
+                    prevent(); 
+                    return;
+                } else if(getelem(wins[i][1]).innerText == "X" && getelem(wins[i][2]).innerText == "X" && getelem(wins[i][0]).innerText == '') {
+                    setTimeout(() => {
+                        handleClick(wins[i][0], true);
+                    }, 700);
+                    prevent(); 
+                    return;
                 }
             }
             length = best.length;
