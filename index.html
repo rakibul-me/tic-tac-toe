@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="shortcut icon" href="tic-tac-toe.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="tic-tac-toe.png" alt="Tic Tac Toe">
+            <h2>Tic Tac Toe</h2>
+        </div>
+        <div class="game">
+            <span class="wrapper">
+                <div id="prevent"></div>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <div class="line4"></div>
+                <div id="winningLine"></div>
+                <div onclick="handleClick(1)" class="btns" id="b1"></div>
+                <div onclick="handleClick(2)" class="btns" id="b2"></div>
+                <div onclick="handleClick(3)" class="btns" id="b3"></div>
+                <div onclick="handleClick(4)" class="btns" id="b4"></div>
+                <div onclick="handleClick(5)" class="btns" id="b5"></div>
+                <div onclick="handleClick(6)" class="btns" id="b6"></div>
+                <div onclick="handleClick(7)" class="btns" id="b7"></div>
+                <div onclick="handleClick(8)" class="btns" id="b8"></div>
+                <div onclick="handleClick(9)" class="btns" id="b9"></div>
+            </span>
+        </div>
+        <div class="dashboard">
+            <div class="player1">
+                <div class="sign">X</div>
+                <span class="name" id="pX">You</span><span id="winner1">(Winner)</span><span> : </span><span
+                    class="score" id="sX"></span>
+            </div>
+            <div class="player2">
+                <div class="sign">O</div>
+                <span class="name" id="pO">Computer</span><span id="winner2">(Winner)</span><span> : </span><span
+                    class="score" id="sO"></span>
+            </div>
+            <div class="indicator"></div>
+            <div id="draw">Draw</div>
+        </div>
+        <div class="game-controller">
+            <button onclick="newGame()">New Game</button>
+            <button onclick="restart()">Restart</button>
+            <button onclick="cancel()">Cancel</button>
+        </div>
+        <div class="choice">
+            <p>With: </p>
+            <button onclick="chooseComputer()">Computer</button>
+            <button onclick="chooseFriend()">Friend</button>
+        </div>
+        <div id="chooseLevel">
+            <p>Level: </p>
+            <button class="btn" onclick="level = 1;closeCom();">Easy</button>
+            <button class="btn" onclick="level = 2;closeCom();">Medium</button>
+            <button class="btn" onclick="level = 3;closeCom();">Hard</button>
+        </div>
+        <div class="name-form">
+            <form id='nameForm'>
+                <label for="player1">Player 1</label>
+                <input type="text" name="player1" id="player1" required><br>
+                <label for="player2">Player 2</label>
+                <input type="text" name="player2" id="player2" required><br>
+                <input type="submit" value="Ok" class='btn'>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
